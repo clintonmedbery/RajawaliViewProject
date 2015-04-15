@@ -6,13 +6,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import org.rajawali3d.surface.RajawaliSurfaceView;
-import org.rajawali3d.surface.RajawaliTextureView;
 
 
 public class MainActivity extends ActionBarActivity {
 
     Renderer renderer;
-
     public RajawaliSurfaceView rajawaliSurface;
 
     @Override
@@ -23,30 +21,6 @@ public class MainActivity extends ActionBarActivity {
         rajawaliSurface = (RajawaliSurfaceView) findViewById(R.id.rajawali_surface);
         renderer = new Renderer(this);
         rajawaliSurface.setSurfaceRenderer(renderer);
-
-
     }
 
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 }
