@@ -5,22 +5,22 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import org.rajawali3d.surface.RajawaliSurfaceView;
+import org.rajawali3d.surface.RajawaliTextureView;
 
 
 public class MainActivity extends ActionBarActivity {
 
     Renderer renderer;
-    public RajawaliSurfaceView rajawaliSurface;
+    public RajawaliTextureView rajawaliTexture;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        rajawaliSurface = (RajawaliSurfaceView) findViewById(R.id.rajawali_surface);
+        rajawaliTexture = (RajawaliTextureView) findViewById(R.id.rajawali_texture);
         renderer = new Renderer(this);
-        rajawaliSurface.setSurfaceRenderer(renderer);
+        rajawaliTexture.setSurfaceRenderer(renderer);
     }
 
 }
